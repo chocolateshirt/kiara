@@ -178,11 +178,11 @@ class Handler(socketserver.BaseRequestHandler):
 						makedirs(os.path.normpath(dir))
 						new_name = None
 						if file.anime_total_eps == "1":
-							new_name = "%s - [%s][%s]%s" % (
+							new_name = "%s - [%s](%s)%s" % (
                 						anime_name, file.group_name, file.crc32,
 								os.path.splitext(file_name)[1])
 						else:
-							new_name = "%s - %s - [%s][%s]%s" % (
+							new_name = "%s - %s - [%s](%s)%s" % (
                 						anime_name,
 								pad(
 									len(str(file.anime_total_eps)),
